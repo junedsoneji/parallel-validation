@@ -1,0 +1,19 @@
+name: parallel-check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  frontend-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Frontend validation
+        run: echo "Running frontend validation..."
+
+  backend-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Backend validation
+        run: echo "Running backend validation..."
